@@ -1,13 +1,16 @@
 public class Infrastructure
 {
-    public TypeEvenement TypeProtection { get; private set; } // Type d'événement contre lequel l'infrastructure protège
-    public int ToursRestantsProtection { get; private set; } // Nombre de tours restants pour la protection
+    // Type d'événement contre lequel l'infrastructure protège
+    public TypeEvenement TypeProtection { get; private set; }
+
+    // Nombre de tours restants pour la protection
+    public int ToursRestantsProtection { get; private set; }
 
     // Constructeur de l'infrastructure
     public Infrastructure(TypeEvenement typeProtection)
     {
         TypeProtection = typeProtection;
-        ToursRestantsProtection = 5; // Protection pour 5 tours
+        ToursRestantsProtection = 5;
     }
 
     // Diminue la durée de protection restante

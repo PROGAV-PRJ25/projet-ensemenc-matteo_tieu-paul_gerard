@@ -1,12 +1,10 @@
 public class Tomate : PlanteComestible
 {
     // Constructeur de Tomate
-    public Tomate()
-        : base("Tomate", 5, 10, TypeTerrain.Terre) // Nom, durée de pousse, durée de vie après maturation, affinité terrain
-    {
-    }
+    public Tomate() : base("Tomate", 5, 10, TypeTerrain.Terre) { }
+    // Nom, durée de pousse, durée de vie après maturation, affinité terrain
 
-    // Retourne l'icône spécifique à la tomate mature
+    // Retourne l'icône représentant la tomate mature
     public override string ObtenirIcone()
     {
         if (EstMature())

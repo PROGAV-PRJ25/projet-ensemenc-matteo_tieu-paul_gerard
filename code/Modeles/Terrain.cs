@@ -1,32 +1,38 @@
-
-// Classe de base abstraite pour les terrains du jardin
 public abstract class Terrain
 {
     // Nombre maximum de plantes par terrain
-    private const int CAPACITE_MAX_PLANTES = 9;
+    private static readonly int CAPACITE_MAX_PLANTES = 9;
 
-    // Propriétés du terrain
-    public Plante[] Plantes { get; private set; } 
-    public bool[] CasesMauvaiseHerbe { get; private set; } 
-    public Infrastructure InfrastructureInstallee { get; set; } 
-    public TypeTerrain Type { get; protected set; } // Type de terrain
+    // Tableau des plantes du terrain
+    public Plante[] Plantes { get; private set; }
 
+    // Tableau des cases mises en place
+    public bool[] CasesMauvaiseHerbe { get; private set; }
+
+    // Protection mise en place
+    public Infrastructure InfrastructureInstallee { get; set; }
+
+    // Type de terrain
+    public TypeTerrain Type { get; protected set; }
+
+    // Constructeur de terrain
     public Terrain()
     {
-        Plantes = new Plante[CAPACITE_MAX_PLANTES]; 
-        CasesMauvaiseHerbe = new bool[CAPACITE_MAX_PLANTES]; // Initialise le tableau de mauvaise herbe
-        InfrastructureInstallee = null; 
+        Plantes = new Plante[CAPACITE_MAX_PLANTES];
+        CasesMauvaiseHerbe = new bool[CAPACITE_MAX_PLANTES];
+        InfrastructureInstallee = null;
     }
 
+    // Ajoute une plante
     public bool AjouterPlante(Plante plante, int indexCase)
     {
         // Vérifie si l'index est valide et la case est libre
         if (indexCase >= 0 && indexCase < CAPACITE_MAX_PLANTES && Plantes[indexCase] == null && !CasesMauvaiseHerbe[indexCase])
         {
             Plantes[indexCase] = plante;
-            return true; // La plante a été ajoutée avec succès
+            return true;
         }
-        return false; 
+        return false;
     }
 
     public Plante RetirerPlante(int indexCase)

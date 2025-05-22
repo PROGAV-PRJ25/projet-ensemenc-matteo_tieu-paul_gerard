@@ -1,7 +1,10 @@
 public abstract class PlanteNonComestible : Plante
 {
-    public int DureeVieMaximale { get; protected set; } // Durée de vie maximale de la plante non comestible
-    public int ToursEcoules { get; set; } // Nombre de tours écoulés depuis la plantation
+    // Durée de vie maximale de la plante non comestible
+    public int DureeVieMaximale { get; protected set; }
+
+    // Nombre de tours écoulés depuis la plantation
+    public int ToursEcoules { get; set; }
 
     // Constructeur de PlanteNonComestible
     public PlanteNonComestible(string nom, int dureePousseBase, int dureeVieMaximale, TypeTerrain typeTerrainAffinite)

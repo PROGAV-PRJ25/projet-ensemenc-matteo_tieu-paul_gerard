@@ -1,5 +1,3 @@
-
-// Classe Tournesol dérivée de PlanteNonComestible
 public class Tournesol : PlanteNonComestible
 {
     // Constructeur de Tournesol
@@ -8,13 +6,12 @@ public class Tournesol : PlanteNonComestible
     {
     }
 
-    // Retourne l'icône spécifique au tournesol
+    // Retourne l'icône représentant le tournesol
     public override string ObtenirIcone()
     {
-        // Le tournesol a une icône spécifique une fois mature
         if (EstMature())
         {
-            return "🌻";
+            return "🌻"; // Icône tournesol mature
         }
         return "🌱"; // Icône semis/croissance
     }
