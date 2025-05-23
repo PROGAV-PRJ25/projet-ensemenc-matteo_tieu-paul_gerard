@@ -16,7 +16,7 @@ public class Affichage
     public void AfficherEtatJardin(int numeroTour, TypeSaison saison, TypeClimat meteo, string titreJoueur, Terrain[] terrains)
     {
         Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
-        Console.WriteLine($"🌤️ Saison : {saison}  |  ⌛ Tours : {numeroTour}  |  🌡️ Météo : {ObtenirNomClimat(meteo)}  |  🎀Titre : {titreJoueur}");
+        Console.WriteLine($"🌤️  Saison : {saison}  |  ⌛ Tours : {numeroTour}  |  🌡️ Météo : {ObtenirNomClimat(meteo)}  |  🎀 Titre : {titreJoueur}");
         Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
 
         // Entêtes des terrains
@@ -25,7 +25,7 @@ public class Affichage
         // Affichage ligne par ligne pour les 3 terrains
         for (int ligne = 0; ligne < 3; ligne++)
         {
-            string ligneAffichage = "";
+            string ligneAffichage = "     ";
             for (int t = 0; t < terrains.Length; t++)
             {
                 ligneAffichage += "[";
@@ -42,12 +42,12 @@ public class Affichage
                     }
                     else
                     {
-                        ligneAffichage += " "; // Case vide
+                        ligneAffichage += "  "; // Case vide
                     }
                     if (col < 2) ligneAffichage += "] [";
                 }
                 ligneAffichage += "]";
-                if (t < terrains.Length - 1) ligneAffichage += "        "; // Espacement entre les terrains
+                if (t < terrains.Length - 1) ligneAffichage += "                   "; // Espacement entre les terrains
             }
             Console.WriteLine(ligneAffichage);
         }
@@ -127,7 +127,7 @@ public class Affichage
     // Affiche les cases où le joueur peut planter une plante
     public void AfficherCasesDisponibles(Terrain terrain, TypePlante typePlante, int numeroTerrain)
     {
-        Console.WriteLine($"Choisissez une case vide sur le Terrain {numeroTerrain} pour planter une {typePlante} (ou '0' pour annuler) :"); Console.WriteLine("Cases disponibles (index 1-9) :");
+        Console.WriteLine($"Choisissez une case vide sur le Terrain {numeroTerrain} pour planter une {typePlante} (ou '0' pour annuler) :"); Console.WriteLine("Cases disponibles :");
         for (int i = 0; i < terrain.Plantes.Length; i++)
         {
             if (terrain.Plantes[i] == null && !terrain.CasesMauvaiseHerbe[i])
