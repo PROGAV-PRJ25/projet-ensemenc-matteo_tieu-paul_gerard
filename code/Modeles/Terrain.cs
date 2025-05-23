@@ -35,22 +35,25 @@ public abstract class Terrain
         return false;
     }
 
+    // Supprime la plante de la case
     public Plante RetirerPlante(int indexCase)
     {
         if (indexCase >= 0 && indexCase < CAPACITE_MAX_PLANTES && Plantes[indexCase] != null)
         {
             Plante plante = Plantes[indexCase];
-            Plantes[indexCase] = null; // Supprime la plante de la case
-            return plante; // Retourne la plante retirée
+            Plantes[indexCase] = null;
+            return plante;
         }
         return null; // Aucune plante à retirer ou index invalide
     }
 
+    // Vérifie si la case est vide
     public bool EstCaseVide(int indexCase)
     {
         return indexCase >= 0 && indexCase < CAPACITE_MAX_PLANTES && Plantes[indexCase] == null;
     }
 
+    // Ajoute une mauvaise herbe sur une case donnée
     public bool AjouterMauvaiseHerbe(int indexCase)
     {
         if (indexCase >= 0 && indexCase < CAPACITE_MAX_PLANTES && Plantes[indexCase] == null && !CasesMauvaiseHerbe[indexCase])
@@ -61,7 +64,7 @@ public abstract class Terrain
         return false;
     }
 
-    // Méthode pour désherber une case
+    // Enlève la mauvaise herbe d'une case donnée
     public bool DesherberCase(int indexCase)
     {
         if (indexCase >= 0 && indexCase < CAPACITE_MAX_PLANTES && CasesMauvaiseHerbe[indexCase])

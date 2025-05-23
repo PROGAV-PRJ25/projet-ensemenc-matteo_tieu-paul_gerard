@@ -1,4 +1,3 @@
-
 public abstract class Plante
 {
     // Compteur pour générer des IDs uniques

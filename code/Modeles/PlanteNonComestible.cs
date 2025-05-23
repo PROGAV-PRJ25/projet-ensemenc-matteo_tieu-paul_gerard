@@ -7,8 +7,7 @@ public abstract class PlanteNonComestible : Plante
     public int ToursEcoules { get; set; }
 
     // Constructeur de PlanteNonComestible
-    public PlanteNonComestible(string nom, int dureePousseBase, int dureeVieMaximale, TypeTerrain typeTerrainAffinite)
-        : base(nom, dureePousseBase, typeTerrainAffinite)
+    public PlanteNonComestible(string nom, int dureePousseBase, int dureeVieMaximale, TypeTerrain typeTerrainAffinite) : base(nom, dureePousseBase, typeTerrainAffinite)
     {
         DureeVieMaximale = dureeVieMaximale;
         ToursEcoules = 0;

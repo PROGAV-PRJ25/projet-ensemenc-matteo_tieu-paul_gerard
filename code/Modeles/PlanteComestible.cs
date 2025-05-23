@@ -1,15 +1,13 @@
-
 public abstract class PlanteComestible : Plante
 {
-    // Durée de vie après la maturité
-    public int DureeVieApresMaturation { get; protected set; }
-
     // Nombre de tours depuis que la plante a atteint sa maturité
     public int ToursDepuisMaturation { get; set; }
 
+    // Durée de vie après la maturité
+    public int DureeVieApresMaturation { get; protected set; }
+
     // Constructeur de PlanteComestible
-    public PlanteComestible(string nom, int dureePousseBase, int dureeVieApresMaturation, TypeTerrain typeTerrainAffinite)
-        : base(nom, dureePousseBase, typeTerrainAffinite)
+    public PlanteComestible(string nom, int dureePousseBase, int dureeVieApresMaturation, TypeTerrain typeTerrainAffinite) : base(nom, dureePousseBase, typeTerrainAffinite)
     {
         DureeVieApresMaturation = dureeVieApresMaturation;
         ToursDepuisMaturation = 0;
