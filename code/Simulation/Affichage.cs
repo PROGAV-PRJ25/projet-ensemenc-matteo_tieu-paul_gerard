@@ -79,17 +79,22 @@ public class Affichage
     // Affiche le menu principal des actions pouvant être réalisées par le joueur
     public void AfficherMenuPrincipal(int actionsRestantes)
     {
-        Console.WriteLine("Bienvenue dans ton jardin ! Que veux-tu faire ?");
-        Console.WriteLine($"🎮 Actions restantes ce tour : {actionsRestantes}");
-        Console.WriteLine("1. Planter une plante");
-        Console.WriteLine("2. Arroser mes plantes");
-        Console.WriteLine("3. Désherber");
-        Console.WriteLine("4. Récolter");
-        Console.WriteLine("5. Traiter contre les maladies");
-        Console.WriteLine("6. Installer une infrastructure");
-        Console.WriteLine("7. Quitter");
-        Console.Write("Votre choix : ");
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.WriteLine("🌿 Bienvenue, Gardien du Jardin  🌿");
+        Console.WriteLine($"✨ Vous disposez de {actionsRestantes} action(s) pour ce tour.");
+        Console.WriteLine("Choisissez votre prochaine tâche avec sagesse :");
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.WriteLine("1. 🌱 Semer les graines du renouveau");
+        Console.WriteLine("2. 💦 Offrir de l’eau à vos protégées");
+        Console.WriteLine("3. 🌿 Libérer la terre des mauvaises herbes");
+        Console.WriteLine("4. 🌾 Récolter les fruits de votre patience");
+        Console.WriteLine("5. 🔮 Soigner les plantes malades");
+        Console.WriteLine("6. 🏗️  Améliorer les structures du jardin");
+        Console.WriteLine("7. 🚪 Quitter le jardin sacré");
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.Write(" ");
     }
+
 
     // Affiche le menu permettant au joueur de sélectionner le terrain
     public void AfficherSelectionTerrain()
