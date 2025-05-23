@@ -4,12 +4,19 @@ public class Affichage
     // Affiche un message de bienvenue au début du jeu
     public void AfficherMessageBienvenue()
     {
-        Console.WriteLine("Bienvenue dans votre jardin potager virtuel !!");
-        Console.WriteLine("Plantez, entretenez et récoltez vos cultures.");
-        Console.WriteLine("Préparez-vous à affronter les défis de la nature !!!");
-        Console.WriteLine("Appuyez sur Entrée pour commencer...");
+        Console.WriteLine(@"
+        ╔══════════════════════════════════════╗
+        ║      🧑‍🌾 Jardin Potager Virtuel     ║
+        ╚══════════════════════════════════════╝");
+
+        Console.WriteLine("Bienvenue, jardinier en herbe !");
+        Console.WriteLine("Ici, vous allez apprendre à planter, entretenir, et récolter vos légumes.");
+        Console.WriteLine("Mais attention aux caprices du climat et aux nuisibles !");
+        Console.WriteLine();
+        Console.WriteLine("Appuyez sur Entrée pour mettre les mains dans la terre 🌱");
         Console.ReadLine();
         Console.Clear();
+
     }
 
     // Affiche l'état général du jardin
