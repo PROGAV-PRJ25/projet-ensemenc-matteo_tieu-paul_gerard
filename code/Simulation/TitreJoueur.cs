@@ -7,14 +7,14 @@ public class TitreJoueur
     private int scoreAtteintPourTitre;
 
     // Affichage pour afficher les messages de félicitations
-    private AffichageConsole affichageConsole;
+    private Affichage Affichage;
 
     // Constructeur de TitreJoueur
     public TitreJoueur()
     {
         NomTitre = "🐣 Novice"; // Titre au début du jeu
         scoreAtteintPourTitre = 0;
-        affichageConsole = new AffichageConsole();
+        Affichage = new Affichage();
     }
 
     // Met à jour le titre du joueur en fonction du score
@@ -38,11 +38,11 @@ public class TitreJoueur
     {
         if (scoreAtteintPourTitre == 50 && NomTitre == "🌱 Jeune pousse")
         {
-            affichageConsole.AfficherMessage("🎉 Félicitations ! Tu as atteint 50 points, tu as gagné le titre de jeune pousse !");
+            Affichage.AfficherMessage("🎉 Félicitations ! Tu as atteint 50 points, tu as gagné le titre de jeune pousse !");
         }
         else if (scoreAtteintPourTitre == 100 && NomTitre == "🥇 Maître du potager")
         {
-            affichageConsole.AfficherMessage("🎉 Félicitations ! Tu as atteint 100 points, tu as gagné le titre de maître du potager !");
+            Affichage.AfficherMessage("🎉 Félicitations ! Tu as atteint 100 points, tu as gagné le titre de maître du potager !");
         }
     }
 }
