@@ -4,13 +4,13 @@ public abstract class Terrain
     private static readonly int CAPACITE_MAX_PLANTES = 9;
 
     // Tableau des plantes du terrain
-    public Plante[] Plantes { get; private set; }
+    public Plante?[] Plantes { get; private set; }
 
     // Tableau des cases mises en place
     public bool[] CasesMauvaiseHerbe { get; private set; }
 
     // Protection mise en place
-    public Infrastructure InfrastructureInstallee { get; set; }
+    public Infrastructure? InfrastructureInstallee { get; set; }
 
     // Type de terrain
     public TypeTerrain Type { get; protected set; }

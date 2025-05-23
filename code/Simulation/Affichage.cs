@@ -150,7 +150,7 @@ public class Affichage
         bool planteTrouvee = false;
         for (int i = 0; i < terrain.Plantes.Length; i++)
         {
-            Plante plante = terrain.Plantes[i];
+            Plante? plante = terrain.Plantes[i];
             bool afficher = false;
             if (plante != null)
             {

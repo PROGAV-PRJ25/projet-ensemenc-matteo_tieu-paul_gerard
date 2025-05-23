@@ -630,13 +630,11 @@ public class Simulation
 
                 if (evenementEnCours == TypeEvenement.Tempete || evenementEnCours == TypeEvenement.Canicule || climatActuel == TypeClimat.Gel)
                 {
-                    // Dans la méthode MettreAJourEtatsPlantes, ligne 634
                     if (terrain.InfrastructureInstallee == null || !terrain.InfrastructureInstallee.EstActive() || terrain.InfrastructureInstallee.TypeProtection != evenementEnCours)
                     {
                         modificateurSante -= 10;
                     }
 
-                    // Puis, séparément, si le climatActuel est Gel et qu'il n'y a pas d'infrastructure protégeant spécifiquement contre le Gel
                     if (climatActuel == TypeClimat.Gel && (terrain.InfrastructureInstallee == null || !terrain.InfrastructureInstallee.EstActive()))
                     {
                         modificateurSante -= 10;
