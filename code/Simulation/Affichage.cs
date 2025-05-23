@@ -180,7 +180,7 @@ public class Affichage
                     etatSupplementaire += " (Infectée 🦠)";
                 }
 
-                Console.WriteLine($"{i + 1}. {plante.ObtenirIcone()} {plante.Nom} n°{plante.Id} - ❤️{plante.Sante}% - ⏳{plante.ToursRestantsAvantMaturite} tours {etatSupplementaire}");
+                Console.WriteLine($"{i + 1}. {plante.ObtenirIcone()} {plante.Nom} n°{plante.Id} - ❤️  {plante.Sante}% - ⏳{plante.ToursRestantsAvantMaturite} tours {etatSupplementaire}");
                 planteTrouvee = true;
             }
         }
